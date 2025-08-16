@@ -21,5 +21,17 @@ class RestaurantNameView(APIView):
                 "description": "Welcome to our restaurant! More deatails coming soon ",
                 "image": None
             }, status=status.HTTP_200_OK)
-        # return Response({"name": settings.RESTAURANT_NAME}, status=status.HTTP_200_OK)
+        # return Response({"name": settings.RESTAURANT_NAME}, status=status.HTTP_200_OK
+    
 
+    def homepage(request):
+        info = RestaurantInfo.objects.first()
+        if info:
+            phone_number = info.phone_number
+        else:
+            phone_number = getattr(settings, " RESTAURANT_PHONE", "Not Available")
+        context={
+            "restaurant_phone": phone_number
+        }
+
+        return render(request, "home/index.html", context)
