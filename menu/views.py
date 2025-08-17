@@ -11,3 +11,8 @@ class MenuItemView(APIView):
             {"id"3, "name":"Chicken", "price": 200}
         ]
         return Response(menu_items, status=status.HTTP_200_OK)
+    def home(request):
+        context = {
+            "restaurant_name": "SpiceHub Restaurant"
+        }
+        return render(request, "home.html", context)
