@@ -35,3 +35,13 @@ class RestaurantNameView(APIView):
         }
 
         return render(request, "home/index.html", context)
+    def contact_us(request):
+        context = {
+            "restaurant_name":"My Restaurant",
+            "phone":"+91 1234567890",
+            "email":"contact@myrestaurant.com",
+            "address": "123 Main Street, HYD, India"
+
+        }
+        return render(request, "home/contact_us.html", context)
+    
