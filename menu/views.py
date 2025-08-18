@@ -16,3 +16,6 @@ class MenuItemView(APIView):
             "restaurant_name": "SpiceHub Restaurant"
         }
         return render(request, "home.html", context)
+    # def django.shortcuts import render
+    def reservations(request):
+        return render(request, "reservations.html")
