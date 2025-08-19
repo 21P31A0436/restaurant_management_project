@@ -1,0 +1,16 @@
+{%  load static %}
+{% load tz %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %} Restaurant Management{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    </head>
+    <body>
+        
+        <footer>
+            <p>& copy; {% now "Y" %} SpiceHub Restaurant. All Rights Resserved</p>
+        </footer>
+    </body>
+</html>
