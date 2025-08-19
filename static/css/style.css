@@ -33,3 +33,11 @@ body{
 .cta-buttons .btn:hover{
     background: #d35400;
 }
+
+.restaurant{
+    width: 150px;
+    height: auto;
+    margin-bottom:20px;
+    border-radius: 50%;
+    
+}
