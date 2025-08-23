@@ -5,7 +5,12 @@
 <div class="container">
     <img src="{% static 'images/logo.png' %}" alt="Restaurant Logo" class="restaurant">
     <h1>Welcome to SpiceHub</h1>
+    <h1>Restaurant Home page</h1>
     <p> Best Food</p>
+    <form class="search-container" method="GET" action="#">
+        <input type="text" name="q" placeholder="search menu items">
+        <button type="submit">Search</button>
+    </form>
 </div>
 
 {% endblock %}
