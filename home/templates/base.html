@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} Restaurant {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'home/style.css'}">
+</head>
+
+<body>
+    <header>
+        <h1> Welcome to {{ restaurant_name | default:" Our Restaurant"}}</h1>
+    </header>
+
+    <footer>
+        & copy; {% now "Y" %} {{ restaurant_name | default:"Our Restaurant"}}
+    </footer>
+</body>
+</html>
